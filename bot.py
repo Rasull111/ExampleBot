@@ -158,29 +158,6 @@ def get_settings_sheet():
     except:
         return get_sheet("Settings")
 
-def load_settings():
-    """Загрузить настройки из Google Sheets"""
-    try:
-        worksheet = get_settings_sheet()
-        # Читаем ячейку A1
-        cell_value = worksheet.cell(1, 1).value
-        if cell_value:
-            return json.loads(cell_value)
-    except Exception as e:
-        logging.error(f"Ошибка при загрузке настроек: {e}")
-    
-    return DEFAULT_SETTINGS.copy()
-
-def save_settings(data):
-    """Сохранить настройки в Google Sheets"""
-    try:
-        worksheet = get_settings_sheet()
-        settings_json = json.dumps(data, ensure_ascii=False, indent=2)
-        worksheet.update_cell(1, 1, settings_json)
-        logging.info("✅ Настройки сохранены")
-    except Exception as e:
-        logging.error(f"❌ Ошибка при сохранении настроек: {e}")
-
 logging.basicConfig(level=logging.INFO)
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher()
@@ -1032,7 +1009,6 @@ async def manage_bookings_start(message: Message, state: FSMContext):
     await state.set_state(ManageBooking.selecting_booking)
 
 
-@dp.message(ManageBooking.selecting_booking)
 @dp.message(ManageBooking.selecting_booking)
 async def manage_booking_selected(message: Message, state: FSMContext):
     if message.text and "Назад" in message.text:
