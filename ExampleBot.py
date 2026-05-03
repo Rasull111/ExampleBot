@@ -81,7 +81,7 @@ def save_settings(data):
 API_TOKEN = os.getenv("BOT_TOKEN")
 SPREADSHEET_ID = os.getenv("SPREADSHEET_ID")
 ADMIN_IDS = [5544514086]
-WEBHOOK_HOST = "https://tyger-barber-shop-production.up.railway.app"
+WEBHOOK_HOST = "https://examplebot-production-e157.up.railway.app"
 WEBHOOK_PATH = f"/{API_TOKEN}"
 WEBAPP_HOST = "0.0.0.0"
 WEBAPP_PORT = int(os.getenv("PORT", 5000))
