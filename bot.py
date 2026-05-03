@@ -144,8 +144,8 @@ class AdminSettings(StatesGroup):
 
 # --- КОНФИГУРАЦИЯ ПО УМОЛЧАНИЮ ---
 DEFAULT_SETTINGS = {
-    "prices": [{"type": "text", "value": "<b>✂️ Прайс-лист:</b>\n\n• Стрижка — 1000\n• Борода — 600\n• Комплекс — 1400"}],
-    "address": [{"type": "text", "value": "<b>📍 Наш адрес:</b>\n<a href='https://2gis.kg/bishkek/geo/70000001019349323'>ул. Ибраимова, 115</a>\n\n<b>⏰ График работы:</b>\nЕжедневно: 10:00 - 21:00"}],
+    "prices": [{"type": "text", "value": "<b>✂️ Прайс-лист:</b>\n\n Стрижка — 1000\n Борода — 600\n Комплекс — 1400"}],
+    "address": [{"type": "text", "value": "<b>📍 Наш адрес:</b>\n<a href='https://2gis.kz/almaty/geo/70000001017272265/76.976480,43.230915'>ул. Ибраимова, 115</a>\n\n<b>⏰ График работы:</b>\nЕжедневно: 10:00 - 21:00"}],
     "masters_info": [],
     "masters_names": []
 }
